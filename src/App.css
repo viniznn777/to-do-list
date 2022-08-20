@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #222;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.containerAll {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  color: #ffffff;
+  font-style: italic;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  background-color: #333;
+  height: 550px;
+  width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  overflow: auto;
+  box-shadow: 1px 1px 5px rgb(24, 24, 24);
+}
+.App::-webkit-scrollbar {
+  width: 10px;
+  height: 100%;
+  background-color: #222;
+}
+.App::-webkit-scrollbar-thumb {
+  width: 10px;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    to left,
+    yellow,
+    rgb(118, 218, 4),
+    rgb(231, 216, 1)
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.containerInput {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #333;
+}
+
+.containerInput .btn-add {
+  padding: 0 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: rgb(0, 160, 0);
+  transition: all 0.2s;
+}
+.containerInput .btn-add:active {
+  transform: scale(0.86);
+}
+.containerInput .btn-add:hover {
+  background-color: rgba(5, 133, 5, 0.849);
+}
+.containerInput .btn-add > svg {
+  margin-top: 4px;
+}
+
+.Input {
+  width: 80%;
+  height: 35px;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-left: 5px;
+  transition: all 0.2s;
+}
+.Input:hover {
+  background-color: #ffffffcc;
+}
+
+.containerLista {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.containerLista p {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.containerLista li {
+  display: flex;
+  width: 100%;
+  font-size: 1rem;
+  color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid yellow;
+  padding-bottom: 2px;
+  transition: all 0.4s;
+}
+
+.containerLista li button {
+  padding: 0px 15px;
+  font-size: 1.4rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background-color: rgb(250, 59, 59);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.containerLista li button:active {
+  transform: scale(0.86);
+}
+.containerLista li button:hover {
+  background-color: rgba(236, 39, 39, 0.795);
+}
+.containerLista li button > svg {
+  margin-top: 4px;
+}
+
+@media screen and (max-width: 434px) {
+  .App {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-height: 568px) {
+  .App {
+    height: 95vh;
   }
 }
